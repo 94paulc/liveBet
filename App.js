@@ -20,8 +20,8 @@ faker.seed(10);
 
 const DATA = [...Array(30).keys()].map((_, i) => {
   return {
-    key: faker.random.uuid(),
-    image: `https://randomuser.me/api/portraits/${faker.helpers.randomize(['women', 'men'])}/${faker.random.number(60)}.jpg`,
+    key: faker.datatype.uuid(),
+    image: `https://randomuser.me/api/portraits/${faker.helpers.randomize(['women', 'men'])}/${faker.datatype.number(60)}.jpg`,
     name: faker.name.findName(),
     jobTitle: faker.name.jobTitle(),
     email: faker.internet.email(),
@@ -49,7 +49,7 @@ export default() => {
             [{ nativeEvent: {contentOffset: {y: scrollY }}}],
             { useNativeDriver: true }
         )}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.key}
         contentContainerStyle={{
           padding: SPACING,
           paddingTop: StatusBar.currentHeight || 42

@@ -19,8 +19,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "faker": "^5.5.3",
-    "Faker": "^0.7.2"
+    "faker": "^5.5.3"
   },
   "private": true
 }
